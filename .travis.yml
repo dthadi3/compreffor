@@ -30,6 +30,20 @@ matrix:
   - os: osx
     env:
     - MB_PYTHON_VERSION=3.8
+#Added power jobs
+  - os: linux
+    arch: ppc64le
+    env:
+    - MB_PYTHON_VERSION=3.6
+  - os: linux
+    arch: ppc64le
+    env:
+    - MB_PYTHON_VERSION=3.7
+    - BUILD_SDIST=true
+  - os: linux
+    arch: ppc64le
+    env:
+    - MB_PYTHON_VERSION=3.8
 before_install:
 - source multibuild/common_utils.sh
 - source multibuild/travis_steps.sh
